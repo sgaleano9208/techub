@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
                 'password' => \Hash::make('admin'),
             ]);
 
+        $this->call(CitySeeder::class);
         $this->call(ClientSeeder::class);
         $this->call(ClientAddressSeeder::class);
         $this->call(ClientContactSeeder::class);
@@ -30,7 +31,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CropTypeVarietySeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(StateSeeder::class);
-        $this->call(TownSeeder::class);
         $this->call(TreatmentSeeder::class);
         $this->call(TreatmentPassSeeder::class);
         $this->call(TreatmentReportSeeder::class);

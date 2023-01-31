@@ -25,12 +25,12 @@ class ClientAddressFactory extends Factory
         return [
             'address' => $this->faker->address,
             'type' => 'physical',
-            'status' => $this->faker->boolean,
+            'status' => 'active',
             'observation' => $this->faker->sentence(15),
             'country_id' => \App\Models\Country::factory(),
             'state_id' => \App\Models\State::factory(),
-            'town_id' => \App\Models\Town::factory(),
             'client_id' => \App\Models\Client::factory(),
+            'city_id' => \App\Models\City::factory(),
         ];
     }
 }

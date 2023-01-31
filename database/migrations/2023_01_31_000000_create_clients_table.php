@@ -29,8 +29,8 @@ return new class extends Migration {
                 ->nullable()
                 ->unique();
             $table->string('origin')->nullable();
-            $table->boolean('status')->default(0);
-            $table->enum('type', ['small', 'medium', 'large']);
+            $table->enum('status', ['active', 'inactive']);
+            $table->string('type')->nullable();
             $table->unsignedBigInteger('technician_id')->nullable();
 
             $table->index('name');

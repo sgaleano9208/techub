@@ -18,7 +18,7 @@ class ClientAddress extends Model
         'observation',
         'country_id',
         'state_id',
-        'town_id',
+        'city_id',
         'client_id',
     ];
 
@@ -27,10 +27,6 @@ class ClientAddress extends Model
     protected $table = 'client_addresses';
 
     public $timestamps = false;
-
-    protected $casts = [
-        'status' => 'boolean',
-    ];
 
     public function country()
     {
@@ -42,13 +38,13 @@ class ClientAddress extends Model
         return $this->belongsTo(State::class);
     }
 
-    public function town()
-    {
-        return $this->belongsTo(Town::class);
-    }
-
     public function client()
     {
         return $this->belongsTo(Client::class);
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
     }
 }

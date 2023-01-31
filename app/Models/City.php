@@ -6,7 +6,7 @@ use App\Models\Scopes\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Town extends Model
+class City extends Model
 {
     use HasFactory;
     use Searchable;

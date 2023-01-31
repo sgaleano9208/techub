@@ -28,9 +28,9 @@ return new class extends Migration {
                 ->onDelete('CASCADE');
 
             $table
-                ->foreign('town_id')
+                ->foreign('city_id')
                 ->references('id')
-                ->on('towns')
+                ->on('cities')
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
 
@@ -53,7 +53,7 @@ return new class extends Migration {
         Schema::table('client_addresses', function (Blueprint $table) {
             $table->dropForeign(['country_id']);
             $table->dropForeign(['state_id']);
-            $table->dropForeign(['town_id']);
+            $table->dropForeign(['city_id']);
             $table->dropForeign(['client_id']);
         });
     }

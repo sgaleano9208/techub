@@ -27,10 +27,6 @@ class Client extends Model
 
     protected $searchableFields = ['*'];
 
-    protected $casts = [
-        'status' => 'boolean',
-    ];
-
     public function technician()
     {
         return $this->belongsTo(User::class, 'technician_id');

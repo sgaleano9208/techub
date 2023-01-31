@@ -29,8 +29,8 @@ class ClientFactory extends Factory
             'phone' => $this->faker->unique->phoneNumber,
             'vat' => $this->faker->unique->text(255),
             'origin' => $this->faker->text(255),
-            'status' => $this->faker->boolean,
-            'type' => 'small',
+            'status' => 'active',
+            'type' => $this->faker->text(255),
             'technician_id' => \App\Models\User::factory(),
         ];
     }

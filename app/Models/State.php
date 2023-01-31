@@ -17,11 +17,6 @@ class State extends Model
 
     public $timestamps = false;
 
-    public function towns()
-    {
-        return $this->hasMany(Town::class);
-    }
-
     public function country()
     {
         return $this->belongsTo(Country::class);
@@ -30,5 +25,10 @@ class State extends Model
     public function clientAddresses()
     {
         return $this->hasMany(ClientAddress::class);
+    }
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
     }
 }
